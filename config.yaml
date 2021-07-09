@@ -5,7 +5,7 @@ theme:
   - docsy
 enableGitInfo: true
 contentDir: content
-defaultContentLanguage: en
+#defaultContentLanguage: en
 
 pygmentsCodeFences: true
 pygmentsUseClasses: false
