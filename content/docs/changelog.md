@@ -1,7 +1,7 @@
 ---
 title: "Changelog"
 date: 2021-067-08
-weight: 4
+weight: 6
 description: >
   All notable changes to this project will be documented here.
 

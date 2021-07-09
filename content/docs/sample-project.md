@@ -1,7 +1,7 @@
 ---
 title: "The sample project"
 date: 2021-07-08
-weight: 2
+weight: 3
 description: >
   This is a sample project demonstrating what Django Access Control is capable of.
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Similar projects"
 date: 2021-06-22
-weight: 2
+weight: 5
 description: >
-  Here is a list of other projects relaed to Django access control.
+  Here is a list of other projects related with permissions and access control for Django.
 ---
 
 We consider a project to be active if the last commit to the repository is less than two years old.

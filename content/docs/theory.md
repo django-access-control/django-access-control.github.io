@@ -1,7 +1,7 @@
 ---
 title: "Theory"
 date: 2021-06-22
-weight: 1
+weight: 2
 description: >
   Here we define the terminology we use throughout the project and provide a little background regarding the decisions made in this project.
 ---
