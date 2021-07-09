@@ -3,10 +3,10 @@ title: "The sample project"
 date: 2021-07-08
 weight: 2
 description: >
-  Here is a small sample project demonstrating what Django Access Control is capable of.
+  This is a sample project demonstrating what Django Access Control is capable of.
 ---
 
-This is a simple forum site for questions about ethics. Beside the built in models like `User` it has only one model: the `Question` (and -- unfortunately -- no model for answers...).
+Here we have a simple forum site for questions about ethics. Beside the built in models like `User` it has only one model: the `Question` (and -- unfortunately -- no model for answers...).
 
 There are three types of users with different sets of permissions:
 
@@ -15,6 +15,20 @@ There are three types of users with different sets of permissions:
 * Staff members have the additional privileges of also seeing unpublished questions and changing the question's `is_published` value. It is `True` by default.
 
 ## Installation and setup
+
+The source code can br found [here](https://github.com/django-access-control/example-project).
+
+Assuming that you have a Unix-like shell, the setup is as follows:
+
+```sh
+git clone git@github.com:django-access-control/example-project.git
+cd example-project
+python3.9 -m venv venv
+. ./venv/bin/activate
+pip install -r requirements.txt
+mv db.sqlite3.example db.sqlite3
+./manage.py runserver
+```
 
 ## An quick walk through
 
@@ -59,4 +73,6 @@ Click "LOG OUT" in the upper right corner, click "LOG IN" and enter the username
 
 ## And what is the significance of this?
 
-The above screenshots do not look like something very special, do they?
+The above screenshots do not look like something very special, do they? Any descent application should be able to do that, shouldn't it?
+
+The value lies in the way access control is implemented: not in the template layer among your HTML code, but in the data access layer, so that all the views, REST & GraphQL controllers, CLI commands and other parts of the app can all go through the very same security layer. All the security configuration lives in the [`QuestionQuerySet`](https://github.com/django-access-control/example-project/blob/master/questions/models.py) class and -- thanks to sensible default -- is no more than 34 lines long.
