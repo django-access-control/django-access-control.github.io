@@ -33,7 +33,7 @@ params:
   # archived_version: false
   version: '1.0'
   url_latest_version: 'https://github.com/django-access-control/django-access-control'
-  github_repo: 'https://github.com/django-access-control/docs'
+  github_repo: 'https://github.com/django-access-control/django-access-control.github.io'
   github_project_repo: 'https://github.com/django-access-control/django-access-control'
   #gcs_engine_id: d72aa9b2712488cc3
   #algolia_docsearch: false

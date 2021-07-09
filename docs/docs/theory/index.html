@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Theory | 🔒 Django access control</title><meta property="og:title" content="Theory" />
+<meta property="og:description" content="Here we define the terminology we use throughout the project and provide a little background regarding the decisions made in this project.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/theory/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-06-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-10T01:20:10+03:00" />
+
+<meta itemprop="name" content="Theory">
+<meta itemprop="description" content="Here we define the terminology we use throughout the project and provide a little background regarding the decisions made in this project.
+"><meta itemprop="datePublished" content="2021-06-22T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-10T01:20:10+03:00" />
+<meta itemprop="wordCount" content="682">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Theory"/>
+<meta name="twitter:description" content="Here we define the terminology we use throughout the project and provide a little background regarding the decisions made in this project.
+"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.23de4c98e47cec9bdeb7760e526985f239bf3e022d174b9e947d3fdfe8764b0c.css" as="style">
+<link href="/scss/main.min.23de4c98e47cec9bdeb7760e526985f239bf3e022d174b9e947d3fdfe8764b0c.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+<style>
+    .nav-link[href="/docs/"] {
+        visibility: hidden !important;
+    }
+    .td-page-meta > a:nth-child(1), .td-page-meta > a:nth-child(2) {
+        visibility: hidden;
+    }
+</style>
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">🔒 Django access control</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a  class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.d338d5b11e0bdf8fdb370d366b552980.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center d-lg-none">
+    
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.d338d5b11e0bdf8fdb370d366b552980.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsuserguide" href="/docs/userguide/">User guide</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docstheory" href="/docs/theory/">Theory</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssample-project" href="/docs/sample-project/">The sample project</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssecurity-notice" href="/docs/security-notice/">Notes on security</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docssimilar-projects" href="/docs/similar-projects/">Similar projects</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docschangelog" href="/docs/changelog/">Changelog</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://github.com/django-access-control/django-access-control.github.io/edit/master/content/en/docs/theory.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/django-access-control/django-access-control.github.io/new/master/content/en/docs/theory.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/django-access-control/django-access-control.github.io/issues/new?title=Theory" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+
+<a href="https://github.com/django-access-control/django-access-control/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+
+
+
+<a id="print" href="/docs/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+
+
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-permissions">What are permissions</a></li>
+    <li><a href="#access-control-system-in-software-layers">Access control system in software layers</a></li>
+    <li><a href="#how-the-access-control-is-used-in-higher-layers">How the access control is used in higher layers</a></li>
+    <li><a href="#explicit-and-implicit-permissions">Explicit and implicit permissions</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/theory/">Theory</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Theory</h1>
+    <div class="lead">Here we define the terminology we use throughout the project and provide a little background regarding the decisions made in this project.</div>
+	       
+	<h2 id="what-are-permissions">What are permissions</h2>
+<p>A permission consists of an <em>action</em> and an <em>object</em>.
+<span style="color: gray;">E.g. &ldquo;can view <em>(action)</em> question with ID 5 <em>(object)</em>.&quot;</span></p>
+<p>Permissions are hierarchical: their object can be</p>
+<ul>
+<li>an entire database <strong>table</strong> (a Django model), <span style="color: gray;">e.g. &ldquo;can view all questions&rdquo;</span>.</li>
+<li>a specific <strong>row</strong> (an instance of a Django model), <span style="color: gray;">e.g. &ldquo;can view all question with ID 5&rdquo;</span>.</li>
+<li>a specific <strong>field</strong> of a specific row (a field of an instance of a Django model), <span style="color: gray;">e.g. &ldquo;can view the title of the question with ID 5&rdquo;</span>.</li>
+</ul>
+<p>If one has the permission &ldquo;can view all questions&rdquo;, they implicitly also have &ldquo;can view all question with ID 5&rdquo; and &ldquo;can view the title of the question with ID 5&rdquo;.</p>
+<p>We refer to this as the <em>scope</em> of the permission.</p>
+<p>Currently we support the same four permission actions as Django natively does:</p>
+<ul>
+<li>add</li>
+<li>view</li>
+<li>change</li>
+<li>delete</li>
+</ul>
+<p>Some actions are restricted to a specific scope. For instance, you can have the permission &ldquo;can add a question&rdquo; (with table scope), but &ldquo;can add a question with ID 5&rdquo; would make no sense given that such a question already exists. Likewise, the &ldquo;delete&rdquo; permission can be granted for all rows in a table or for a specific row, but not for a field (updating the value of a field to be <code>None</code>/<code>null</code> would not quality as deleting it).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>table/model</th>
+<th>row/object</th>
+<th>field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add</td>
+<td>X</td>
+<td>-</td>
+<td>X</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+</tr>
+<tr>
+<td>view</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>change</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-control-system-in-software-layers">Access control system in software layers</h2>
+<p>A good software system consists of distinct layers. Although the layers themselves are usually the same, each framewrok names them differently. In case of Django, they would be:</p>
+<table id="system-layers-diagram">
+  <tr>
+      <td style="background-color: #85f56c">Template</td>
+      <td rowspan=2 style="background-color: #ffed78">Django admin</td>
+  </tr>
+  <tr>
+      <td style="background-color: #f27dff">View</td>
+  </tr>
+  <tr>
+      <td colspan=2 style="background-color: #a07dff">Business logic</td>
+  </tr>
+  <tr>
+      <td colspan=2 style="background-color: #4287f5">Data access</td>
+  </tr>
+</table>
+<style>
+  #system-layers-diagram td {
+    text-align: center; 
+    vertical-align: middle;
+  }
+</style>
+<ul>
+<li>the template layer (serializer layer in REST APIs) &ndash; responsible for formating the response the user can see</li>
+<li>the view layer &ndash; responsible for the content the user can see</li>
+<li>the service layer &ndash; responsible for an individual unit of work which can be used by many views. In smaller projects it is OK to merge it with the view layer, but in bigger projects a distinct service layer makes it easier to reuse, decouple and test your code</li>
+<li>the data access layer &ndash; responsible for retrieving and saving the data, in other words, responsible for communicating with the underlying database</li>
+</ul>
+<p>The Django admin site combines the template and the view layers (although you do can dig in and modify both the underling templates and views for more granular customizations).</p>
+<p>It is technically possible to implement the access control system in any of the layers. You can even put it into the template layer &ndash; meaning that your security mechanisms live alongside your HTML tags &ndash; but this lead to numerous problems regarding both code readability as well as security risks.</p>
+<p>The deeper in the layer system the access control system is implemented, the fewer code duplication we need and the less likely it is that we accidentally forget to consider it in some database queries.</p>
+<p>Thus, the access control system should be implemented in the data access layer, in Django terms, in the <code>QuerySet</code>.</p>
+<h2 id="how-the-access-control-is-used-in-higher-layers">How the access control is used in higher layers</h2>
+<p>The basic idea is to have have special methods on the <code>QuerySet</code> which will figure out, which data the user can access. This method will be chained with other methods performing filtering based on which data we need to retrieve, e.g. <code>Question.objects.rows_with_view_permission(user).filter(is_relevant=True)</code>.</p>
+<h2 id="explicit-and-implicit-permissions">Explicit and implicit permissions</h2>
+<p>Permissions can be <em>granted explicitly</em> or be <em>deducted implicitly</em> from existing data. E.g. in a StackOverflow style system you can update a question if</p>
+<ul>
+<li>you are an admin (the admin privileges have been <em>explicitly</em> granted to you)</li>
+<li>you are the one who asked the question (your ownership position <em>implicitly</em> grants you the permission)</li>
+<li>you have enough reputation (your high reputation <em>implicitly</em> grants you the permission)</li>
+</ul>
+<p>Thus the access control methods in the <code>QuerySet</code> have the entire database at their disposal: they can check for entries in the dedicated permissions table(s) as well as look for other pieces of data to deduct permissions from.</p>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified July 10, 2021: <a  href="https://github.com/django-access-control/django-access-control.github.io/commit/9c461624b246890807d1c214ae5bc8a097e61357">Working on homepage (9c46162)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.63db3e552bd0543be17ce4a79a18b744e9cb72256bec42b540e3ab0cd43722d0.js" integrity="sha256-Y9s&#43;VSvQVDvhfOSnmhi3ROnLciVr7EK1QOOrDNQ3ItA=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

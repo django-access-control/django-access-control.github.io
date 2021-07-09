@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" /><link rel="canonical" type="text/html" href="/docs/">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Welcome to Django Access Control! 🎉🔒 | 🔒 Django access control</title><meta property="og:title" content="Welcome to Django Access Control! 🎉🔒" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/" />
+
+<meta itemprop="name" content="Welcome to Django Access Control! 🎉🔒">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Welcome to Django Access Control! 🎉🔒"/>
+<meta name="twitter:description" content=""/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.23de4c98e47cec9bdeb7760e526985f239bf3e022d174b9e947d3fdfe8764b0c.css" as="style">
+<link href="/scss/main.min.23de4c98e47cec9bdeb7760e526985f239bf3e022d174b9e947d3fdfe8764b0c.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+<style>
+    .nav-link[href="/docs/"] {
+        visibility: hidden !important;
+    }
+    .td-page-meta > a:nth-child(1), .td-page-meta > a:nth-child(2) {
+        visibility: hidden;
+    }
+</style>
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">🔒 Django access control</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a  class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.d338d5b11e0bdf8fdb370d366b552980.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Welcome to Django Access Control! 🎉🔒</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-63246bcc406b02703a4bbc30c80e355d">User guide</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-edbb45cd5dc592e7899fc6f8a04dafaf">Theory</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-64794d47fd6d21acbad88d474356d634">The sample project</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-36774dbc8f003cfd87f90855f66cbf56">Notes on security</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-29d429248106021815a0ce8274ca135d">Similar projects</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-343723a0cb380f664aedf0dfed5c1c2f">Changelog</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      <p>Django Access Control is a flexible and developer friendly framework for managing table, row and field level permissions.</p>
+<p>Refer to the <a href="/docs/userguide/">user guide</a> to get started!</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-63246bcc406b02703a4bbc30c80e355d">1 - User guide</h1>
+    <div class="lead">Here is the quick overview how to use the framework.</div>
+	<h2 id="the-theory">The theory</h2>
+<blockquote>
+Experience by itself teaches nothing...<br>
+Without theory, experience has no meaning.<br>
+Without theory, one has no questions to ask.<br>
+Hence without theory there is no learning.<br>
+~ <cite>W. Edwards Deming</cite>
+</blockquote>
+<p>Yes, theories can be boring. However, we need to establish some common vocabulary before we can move forward. Therefore, please review the <a href="/docs/theory/">theory</a> section before heading on to practical stuff.</p>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pip install django-access-control
+</code></pre></div><p>That&rsquo;s it. No need to add anything to <code>INSTALLED_APPS</code>, configure the <code>AUTHENTICATION_BACKENDS</code> or inherit from our <code>User</code> model. Also, we do not create any objects in your database.</p>
+<h2 id="implementing-access-control">Implementing access control</h2>
+<p>Different systems need different granularity when it comes to access control.
+Let&rsquo;s go over some examples moving from more broad categories to more specific ones.</p>
+<p>We will implement a simplified version of <a href="/docs/example-project/">the example project</a>: a Q&amp;A site.
+Let&rsquo;s create the model <code>Question</code> as follows:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.db</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">models</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">Question</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">Model</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#000">title</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">CharField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">max_length</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">body</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">TextField</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#000">author</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ForeignKey</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">settings</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">AUTH_USER_MODEL</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">on_delete</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">PROTECT</span><span style="color:#000;font-weight:bold">)</span>
+    <span style="color:#000">is_published</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">models</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">BooleanField</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">default</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+
+    <span style="color:#000">objects</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">QuestionQuerySet</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">as_manager</span><span style="color:#000;font-weight:bold">()</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">__str__</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">title</span>
+</code></pre></div><p>Above the model, let&rsquo;s add the query set:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django_access_control.querysets</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ConfidentialQuerySet</span>
+
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">QuestionQuerySet</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ConfidentialQuerySet</span><span style="color:#000;font-weight:bold">):</span>
+    <span style="color:#204a87;font-weight:bold">pass</span>
+</code></pre></div><p>Finally, let&rsquo;s register oue model to the DJango admin site:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django.contrib</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">admin</span>
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">django_access_control.admin</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">ConfidentialModelAdmin</span>
+
+<span style="color:#204a87;font-weight:bold">from</span> <span style="color:#000">questions.models</span> <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">Question</span>
+
+
+<span style="color:#5c35cc;font-weight:bold">@admin</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">register</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Question</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">QuestionAdmin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ConfidentialModelAdmin</span><span style="color:#000;font-weight:bold">):</span>
+
+    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">save_model</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">obj</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">form</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">change</span><span style="color:#000;font-weight:bold">):</span>
+        <span style="color:#4e9a06">&#34;&#34;&#34;
+</span><span style="color:#4e9a06">        Automatically fill `question.author` with the current user
+</span><span style="color:#4e9a06">        when a new question is added.
+</span><span style="color:#4e9a06">        &#34;&#34;&#34;</span>
+        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#204a87;font-weight:bold">not</span> <span style="color:#000">change</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#8f5902;font-style:italic"># `not change` means the obj is added, not modified</span>
+            <span style="color:#000">obj</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">author</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">user</span>
+        <span style="color:#204a87">super</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">save_model</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">request</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">obj</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">form</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">change</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>Now everything should work in the same way as it normal would since our permission policy defaults are the same as Django&rsquo;s to make it more intuitive to use.</p>
+<h3 id="table-level-permissions">Table level permissions</h3>
+<p>There are four methods to configure table level permissions. Here they are with their default implementations:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">has_table_wide_add_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#204a87">bool</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_superuser</span> <span style="color:#204a87;font-weight:bold">or</span> <span style="color:#000">has_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;add&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">has_table_wide_view_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#204a87">bool</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_superuser</span> <span style="color:#204a87;font-weight:bold">or</span> <span style="color:#000">has_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;view&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">has_table_wide_change_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#204a87">bool</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_superuser</span> <span style="color:#204a87;font-weight:bold">or</span> <span style="color:#000">has_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;change&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">has_table_wide_delete_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#204a87">bool</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_superuser</span> <span style="color:#204a87;font-weight:bold">or</span> <span style="color:#000">has_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;delete&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><p>Let&rsquo;s override one of them to give every logged in user the right to add questions:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">has_table_wide_add_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#204a87">bool</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_authenticated</span>
+
+</code></pre></div><h3 id="row-level-permissions">Row level permissions</h3>
+<p>If the user has some permission for the entire table, it will apply to all the rows. The methods below will give you more granular control by allowing to you give extra permission to a limited number or rows.</p>
+<p>The methods you can use are:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">rows_with_extra_view_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">QuerySet</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">none</span><span style="color:#000;font-weight:bold">()</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">rows_with_extra_change_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">QuerySet</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">none</span><span style="color:#000;font-weight:bold">()</span>
+
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">rows_with_extra_delete_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">QuerySet</span><span style="color:#000;font-weight:bold">:</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">none</span><span style="color:#000;font-weight:bold">()</span>
+</code></pre></div><p>By default they do not grant permission to any rows. Let&rsquo;s adjust the <code>view</code> permissions so that</p>
+<ul>
+<li>everybody can see published questions</li>
+<li>staff members can see all questions</li>
+<li>authors can see their questions even if they are not published</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">rows_with_extra_view_permission</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">QuerySet</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">Question</span><span style="color:#000;font-weight:bold">]:</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_staff</span><span style="color:#000;font-weight:bold">:</span>
+        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">is_published</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">|</span> \
+            <span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">filter</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">author</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_authenticated</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">none</span><span style="color:#000;font-weight:bold">())</span>
+</code></pre></div><p>On the last line <code>|</code> is the bitwise OR operator which returns the union of the two querysets (this is why we learned set theory at school 🙂 ).</p>
+<p>The <code>if user.is_authenticated else</code> is necessary because if the user is not logged in, they are represented by an <a href="https://docs.djangoproject.com/en/dev/ref/contrib/auth/#django.contrib.auth.models.AnonymousUser"><code>AnonymousUser</code></a> which has a more limited interface compared to the regular <code>User</code>. Without this check, <code>AnonymousUser</code> would be passed to <code>self.filter(author=user)</code> which would result in an exception in the lower layers (which was pretty hard to track down&hellip;).</p>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Be mindful!</h4>
+
+    <p>There are two methods with very similar names:</p>
+<ul>
+<li><code>rows_with_extra_view_permission</code></li>
+<li><code>rows_with_view_permission</code></li>
+</ul>
+<p>You should override the first one. The later on will use <code>rows_with_extra_view_permission</code> as well as <code>has_table_wide_view_permission</code> to combine together all the rows the user can view. That method might be handy if you need to fetch all the rows in your view layer. It is also internally used in the Django admin integration.</p>
+
+
+</div>
+
+<h3 id="colum-level-permissions">Colum level permissions</h3>
+<p>There are three methods for fine-tuning field level permissions:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#5c35cc;font-weight:bold">@classmethod</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">addable_fields</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">cls</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">FrozenSet</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">]:</span>
+    <span style="color:#4e9a06">&#34;&#34;&#34;
+</span><span style="color:#4e9a06">    Control which fields the user can specify when creating a new object (row).
+</span><span style="color:#4e9a06">    NB! Make sure that all not nullable fields that are not specified here
+</span><span style="color:#4e9a06">    would be populated automatically
+</span><span style="color:#4e9a06">    to prevent IntegrityError for the database.
+</span><span style="color:#4e9a06">    &#34;&#34;&#34;</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">all_field_names</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">cls</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#5c35cc;font-weight:bold">@staticmethod</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">viewable_fields</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">obj</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">FrozenSet</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">]:</span>
+    <span style="color:#4e9a06">&#34;&#34;&#34;
+</span><span style="color:#4e9a06">    Control which wields the user can view.
+</span><span style="color:#4e9a06">    &#34;&#34;&#34;</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">all_field_names</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">obj</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#5c35cc;font-weight:bold">@staticmethod</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">changeable_fields</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">obj</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">FrozenSet</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">]:</span>
+    <span style="color:#4e9a06">&#34;&#34;&#34;
+</span><span style="color:#4e9a06">    Control which wields the user can edit.
+</span><span style="color:#4e9a06">    &#34;&#34;&#34;</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">all_field_names</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">obj</span><span style="color:#000;font-weight:bold">))</span>
+</code></pre></div><p>By default the user has access to all the fields. Let&rsquo;s update it so that</p>
+<ul>
+<li>the question authors can update the <code>body</code> of the question</li>
+<li>stuff members can publish and unpublish questions</li>
+<li>superusers can do everything</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#5c35cc;font-weight:bold">@staticmethod</span>
+<span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">changeable_fields</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">AbstractUser</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">obj</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Question</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">FrozenSet</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87">str</span><span style="color:#000;font-weight:bold">]:</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_superuser</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">all_field_names</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">obj</span><span style="color:#000;font-weight:bold">))</span>
+    <span style="color:#000">fields</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">()</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">obj</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">author</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#000">user</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">fields</span> <span style="color:#ce5c00;font-weight:bold">|=</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">({</span><span style="color:#4e9a06">&#34;body&#34;</span><span style="color:#000;font-weight:bold">})</span>
+    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">user</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_staff</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">fields</span> <span style="color:#ce5c00;font-weight:bold">|=</span> <span style="color:#204a87">frozenset</span><span style="color:#000;font-weight:bold">({</span><span style="color:#4e9a06">&#34;is_published&#34;</span><span style="color:#000;font-weight:bold">})</span>
+    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">fields</span>
+</code></pre></div>
+
+<div class="alert alert-primary" role="alert">
+
+
+    We use <code>frozenset</code> &ndash; an immutable version of the regular <code>set</code> &ndash; because immutability greatly reduces the risk of human error (such as passing the mutable set to a function as an argument, modifying it in the function and not being aware that the changes will also influence other places where the same set is used). And mistakes in the security layer can be costly&hellip;
+
+</div>
+
+<h2 id="the-view-layer">The view layer</h2>
+<p>Django Access Control provides out-of-the-box integration with the Django admin site through the <code>ConfidentialModelAdmin</code> class. You can use its implementation as an example for your custom views and forms as well.</p>
+<p>In addition to the methods already discussed above, <code>ConfidentialQuerySet</code> provides some special methods intended to be used in the view layer:</p>
+<ul>
+<li><code>rows_with_view_permission(self, user: AbstractUser) -&gt; QuerySet</code></li>
+<li><code>rows_with_change_permission(self, user: AbstractUser) -&gt; QuerySet</code></li>
+<li><code>rows_with_delete_permission(self, user: AbstractUser) -&gt; QuerySet</code></li>
+<li><code>rows_with_some_permission(self, user: AbstractUser) -&gt; QuerySet</code> &ndash; returns all rows for which the user has at least some kind of permissions</li>
+<li><code>has_some_permissions(self, user: AbstractUser) -&gt; bool</code> &ndash; indicates whether the user has any permission to any instance of the model</li>
+<li><code>contains(self, obj: Model) -&gt; bool</code> &ndash; indicates whether the given queryset contains the <code>obj</code></li>
+</ul>
+
+
+<div class="alert alert-warning" role="alert">
+
+
+    Django Access Control cannot guard you from everything.<br>
+Please refer to <a href="/docs/security-notice/">the security notice</a> for further details.
+
+</div>
+
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-edbb45cd5dc592e7899fc6f8a04dafaf">2 - Theory</h1>
+    <div class="lead">Here we define the terminology we use throughout the project and provide a little background regarding the decisions made in this project.</div>
+	<h2 id="what-are-permissions">What are permissions</h2>
+<p>A permission consists of an <em>action</em> and an <em>object</em>.
+<span style="color: gray;">E.g. &ldquo;can view <em>(action)</em> question with ID 5 <em>(object)</em>.&quot;</span></p>
+<p>Permissions are hierarchical: their object can be</p>
+<ul>
+<li>an entire database <strong>table</strong> (a Django model), <span style="color: gray;">e.g. &ldquo;can view all questions&rdquo;</span>.</li>
+<li>a specific <strong>row</strong> (an instance of a Django model), <span style="color: gray;">e.g. &ldquo;can view all question with ID 5&rdquo;</span>.</li>
+<li>a specific <strong>field</strong> of a specific row (a field of an instance of a Django model), <span style="color: gray;">e.g. &ldquo;can view the title of the question with ID 5&rdquo;</span>.</li>
+</ul>
+<p>If one has the permission &ldquo;can view all questions&rdquo;, they implicitly also have &ldquo;can view all question with ID 5&rdquo; and &ldquo;can view the title of the question with ID 5&rdquo;.</p>
+<p>We refer to this as the <em>scope</em> of the permission.</p>
+<p>Currently we support the same four permission actions as Django natively does:</p>
+<ul>
+<li>add</li>
+<li>view</li>
+<li>change</li>
+<li>delete</li>
+</ul>
+<p>Some actions are restricted to a specific scope. For instance, you can have the permission &ldquo;can add a question&rdquo; (with table scope), but &ldquo;can add a question with ID 5&rdquo; would make no sense given that such a question already exists. Likewise, the &ldquo;delete&rdquo; permission can be granted for all rows in a table or for a specific row, but not for a field (updating the value of a field to be <code>None</code>/<code>null</code> would not quality as deleting it).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>table/model</th>
+<th>row/object</th>
+<th>field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add</td>
+<td>X</td>
+<td>-</td>
+<td>X</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+</tr>
+<tr>
+<td>view</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>change</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-control-system-in-software-layers">Access control system in software layers</h2>
+<p>A good software system consists of distinct layers. Although the layers themselves are usually the same, each framewrok names them differently. In case of Django, they would be:</p>
+<table id="system-layers-diagram">
+  <tr>
+      <td style="background-color: #85f56c">Template</td>
+      <td rowspan=2 style="background-color: #ffed78">Django admin</td>
+  </tr>
+  <tr>
+      <td style="background-color: #f27dff">View</td>
+  </tr>
+  <tr>
+      <td colspan=2 style="background-color: #a07dff">Business logic</td>
+  </tr>
+  <tr>
+      <td colspan=2 style="background-color: #4287f5">Data access</td>
+  </tr>
+</table>
+<style>
+  #system-layers-diagram td {
+    text-align: center; 
+    vertical-align: middle;
+  }
+</style>
+<ul>
+<li>the template layer (serializer layer in REST APIs) &ndash; responsible for formating the response the user can see</li>
+<li>the view layer &ndash; responsible for the content the user can see</li>
+<li>the service layer &ndash; responsible for an individual unit of work which can be used by many views. In smaller projects it is OK to merge it with the view layer, but in bigger projects a distinct service layer makes it easier to reuse, decouple and test your code</li>
+<li>the data access layer &ndash; responsible for retrieving and saving the data, in other words, responsible for communicating with the underlying database</li>
+</ul>
+<p>The Django admin site combines the template and the view layers (although you do can dig in and modify both the underling templates and views for more granular customizations).</p>
+<p>It is technically possible to implement the access control system in any of the layers. You can even put it into the template layer &ndash; meaning that your security mechanisms live alongside your HTML tags &ndash; but this lead to numerous problems regarding both code readability as well as security risks.</p>
+<p>The deeper in the layer system the access control system is implemented, the fewer code duplication we need and the less likely it is that we accidentally forget to consider it in some database queries.</p>
+<p>Thus, the access control system should be implemented in the data access layer, in Django terms, in the <code>QuerySet</code>.</p>
+<h2 id="how-the-access-control-is-used-in-higher-layers">How the access control is used in higher layers</h2>
+<p>The basic idea is to have have special methods on the <code>QuerySet</code> which will figure out, which data the user can access. This method will be chained with other methods performing filtering based on which data we need to retrieve, e.g. <code>Question.objects.rows_with_view_permission(user).filter(is_relevant=True)</code>.</p>
+<h2 id="explicit-and-implicit-permissions">Explicit and implicit permissions</h2>
+<p>Permissions can be <em>granted explicitly</em> or be <em>deducted implicitly</em> from existing data. E.g. in a StackOverflow style system you can update a question if</p>
+<ul>
+<li>you are an admin (the admin privileges have been <em>explicitly</em> granted to you)</li>
+<li>you are the one who asked the question (your ownership position <em>implicitly</em> grants you the permission)</li>
+<li>you have enough reputation (your high reputation <em>implicitly</em> grants you the permission)</li>
+</ul>
+<p>Thus the access control methods in the <code>QuerySet</code> have the entire database at their disposal: they can check for entries in the dedicated permissions table(s) as well as look for other pieces of data to deduct permissions from.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-64794d47fd6d21acbad88d474356d634">3 - The sample project</h1>
+    <div class="lead">This is a sample project demonstrating what Django Access Control is capable of.</div>
+	<p>Here we have a simple forum site for questions about ethics. Beside the built in models like <code>User</code> it has only one model: the <code>Question</code> (and &ndash; unfortunately &ndash; no model for answers&hellip;).</p>
+<p>There are three types of users with different sets of permissions:</p>
+<ul>
+<li>Anonymous users can view (but not edit) questions, which have <code>is_published</code> set to <code>True</code>.</li>
+<li>Logged in users can see published questions and also ask new ones. Later on they can edit the body of the question, but not its title. The author of the question can see it even if it is not published.</li>
+<li>Staff members have the additional privileges of also seeing unpublished questions and changing the question&rsquo;s <code>is_published</code> value. It is <code>True</code> by default.</li>
+</ul>
+<h2 id="installation-and-setup">Installation and setup</h2>
+<p>The source code can br found <a href="https://github.com/django-access-control/example-project">here</a>.</p>
+<p>Assuming that you have a Unix-like shell, the setup is as follows:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone git@github.com:django-access-control/example-project.git
+<span style="color:#204a87">cd</span> example-project
+python3.9 -m venv venv
+. ./venv/bin/activate
+pip install -r requirements.txt
+mv db.sqlite3.example db.sqlite3
+./manage.py runserver
+</code></pre></div><h2 id="an-quick-walk-through">An quick walk through</h2>
+<h3 id="the-anonymous-users-point-of-view">The anonymous user&rsquo;s point of view</h3>
+<ol>
+<li>Open <code>http://127.0.0.1:8000/</code> in your browser. You should see the familiar Django admin interface.</li>
+</ol>
+<p><img src="/img/anonymous-user-index-view.png" alt="The index view"></p>
+<ol start="2">
+<li>Click on the blue text &ldquo;Questions&rdquo; and you see the list view of all published questions.</li>
+</ol>
+<p><img src="/img/anonymous-user-list-view.png" alt="The list view"></p>
+<ol start="3">
+<li>Click on the first question and you will see a read-only detailed view.</li>
+</ol>
+<p><img src="/img/anonymous-user-question-view.png" alt="The readonly view"></p>
+<h3 id="the-logged-in-users-point-of-view">The logged in user&rsquo;s point of view</h3>
+<ol>
+<li>Click &ldquo;LOG IN&rdquo; in the upper right corner and enter the username <code>Thomas_Aquinas</code> and password: <code>adminadmin</code>. You will be directed back to the index page. Now the &ldquo;+ Add&rdquo; button has appeared for &ldquo;Questions&rdquo;.</li>
+</ol>
+<p><img src="/img/aquinas-index-view.png" alt="The index view"></p>
+<ol start="2">
+<li>Click again on the blue text &ldquo;Questions&rdquo; and you will see the list view. That time, however, one more question has appeared: &ldquo;What is virtue?&rdquo; is not published, but since Thomas Aquinas (the logged in user) is the author of that question, they can still see it.</li>
+</ol>
+<p><img src="/img/aquinas-list-view.png" alt="The list view"></p>
+<ol start="3">
+<li>Clicking on the title of that question will open the change view where you can make adjustments to the body of the question.</li>
+</ol>
+<p><img src="/img/my-question-edit-view.png" alt="The readonly view"></p>
+<ol start="4">
+<li>Opening a question by some other author (e.g. &ldquo;What makes somebody&rsquo;s life meaningful?&rdquo; will open a read-only view).</li>
+</ol>
+<p><img src="/img/other-author-question-view.png" alt="The readonly view"></p>
+<h3 id="the-staff-members-point-of-view">The staff member&rsquo;s point of view</h3>
+<p>Click &ldquo;LOG OUT&rdquo; in the upper right corner, click &ldquo;LOG IN&rdquo; and enter the username <code>Nāgārjuna</code> and password: <code>adminadmin</code>. Click on the blue text &ldquo;Questions&rdquo; and then click on any of the questions in the list view. Now you see a checkbox to alter the &ldquo;Is published&rdquo; value.</p>
+<p><img src="/img/change-is-published.png" alt="The list view"></p>
+<h2 id="and-what-is-the-significance-of-this">And what is the significance of this?</h2>
+<p>The above screenshots do not look like something very special, do they? Any descent application should be able to do that, shouldn&rsquo;t it?</p>
+<p>The value lies in the way access control is implemented: not in the template layer among your HTML code, but in the data access layer, so that all the views, REST &amp; GraphQL controllers, CLI commands and other parts of the app can all go through the very same security layer. All the security configuration lives in the <a href="https://github.com/django-access-control/example-project/blob/master/questions/models.py"><code>QuestionQuerySet</code></a> class and &ndash; thanks to sensible default &ndash; is no more than 34 lines long.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-36774dbc8f003cfd87f90855f66cbf56">4 - Notes on security</h1>
+    
+	<p>Even if you use Django Access Control, you need to pay attention to some things we cannot guard you against.</p>
+<p>Firstly, we provide the <code>QuerySet</code> methods for enforcing access control, but it is up to you to use them in your views. If you accidentally have <code>return Question.objects.all()</code> instead of <code>return Question.objects.rows_with_view_permission(user)</code>, you bypass all the security checks.</p>
+<h2 id="django-admin-integration">Django admin integration</h2>
+<p>Beware that:</p>
+<ul>
+<li><strong>Field level permissions are not enforced for list view</strong> since the same fields need to be shown for all the rows.</li>
+<li>You need to <strong>enforce field level permissions in <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/actions/">admin actions</a></strong> yourself: since they are functions defined by you, you are responsible for the security as well.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-29d429248106021815a0ce8274ca135d">5 - Similar projects</h1>
+    <div class="lead">Here is a list of other projects related with permissions and access control for Django.</div>
+	<p>We consider a project to be active if the last commit to the repository is less than two years old.</p>
+<h2 id="actively-maintained-projects">Actively maintained projects</h2>
+<ul>
+<li><a href="https://github.com/Ur-Solutions/django_scoped_permissions/blob/develop/docs/guide/core-concepts.rst">Django Scoped Permissions</a> &ndash; not very popular, but might have useful ideas</li>
+<li><a href="https://django-role-permissions.readthedocs.io/en/stable/">django-role-permissions</a> &ndash; seems popular</li>
+<li><a href="https://github.com/RamezIssac/django-tabular-permissions">django-tabular-permissions</a> &ndash; provides a good visual overview of the permissions the user has</li>
+<li><a href="https://github.com/serioeseGmbH/serious-django-permissions">serious-django-permissions</a> &ndash; provides central per-app permissions management</li>
+<li><a href="https://github.com/silentsokolov/django-admin-permissions">django-admin-permissions</a></li>
+</ul>
+<h2 id="no-longer-maintained-projects">No longer maintained projects</h2>
+<ul>
+<li><a href="https://github.com/diefenbach/django-permissions">Django Permissions</a> &ndash; last commit in 2015</li>
+<li><a href="https://github.com/staab/django-flexible-permissions">Django Flexible Permissions</a> &ndash; last commit in 2015, has some useful <a href="https://github.com/staab/django-flexible-permissions/wiki">material</a></li>
+<li><a href="https://github.com/specialunderwear/django-finegrained-permissions">Django Finegraned Permissions</a> &ndash; last commit in 2013, perhaps something interesting <a href="https://github.com/specialunderwear/django-finegrained-permissions/blob/master/fgp/__init__.py">here</a></li>
+<li><a href="https://github.com/eduardo-matos/django-global-permissions">Django Global Permissions</a> &ndash; last commit in 2018, might be useful</li>
+<li><a href="https://django-improved-permissions.readthedocs.io/en/latest/">Django Improved Permissions</a> &ndash; repo is archived, but the documentation seems useful</li>
+<li><a href="https://github.com/aarcro/django-field-object-permissions">django-field-object-permissions</a> &ndash; last commit in 2017, implements object permissions based on the value of some field</li>
+<li><a href="https://github.com/tiliv/django-field-permissions">django-field-permissions</a> &ndash; last commit in 2016</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-343723a0cb380f664aedf0dfed5c1c2f">6 - Changelog</h1>
+    <div class="lead">All notable changes to this project will be documented here.
+The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</div>
+	<h2 id="10---span-stylecolor-gray2021-07-09span">1.0 - <span style="color: gray;">2021-07-09</span></h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Enhance <code>ConfidentialQuerySet</code> API</li>
+<li>Enhance integration with DJango admin site</li>
+</ul>
+<h2 id="04---span-stylecolor-gray2021-06-24span">0.4 - <span style="color: gray;">2021-06-24</span></h2>
+<h3 id="changed-1">Changed</h3>
+<ul>
+<li>Remove the need to use a custom authentication backend</li>
+<li>Enhance <code>ConfidentialQuerySet</code> API</li>
+<li>Enhance integration with DJango admin site</li>
+</ul>
+<h2 id="03---span-stylecolor-gray2021-06-24span">0.3 - <span style="color: gray;">2021-06-24</span></h2>
+<h3 id="changed-2">Changed</h3>
+<ul>
+<li>Make access control hierarchical, introduce the idea of quantifiers</li>
+<li>Refactor access control logic out of the <code>ModelAdmin</code> class so that is could be used in other places as well</li>
+</ul>
+<h2 id="02---span-stylecolor-gray2021-06-24span">0.2 - <span style="color: gray;">2021-06-24</span></h2>
+<h3 id="changed-3">Changed</h3>
+<ul>
+<li>Project was renamed from Django Granular Permissions to Django access Control</li>
+</ul>
+<h2 id="01---span-stylecolor-gray2021-06-23span">0.1 - <span style="color: gray;">2021-06-23</span></h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Added <code>ConfidentialQuerySet</code> which provides access control on the data access level</li>
+<li>Added <code>ConfidentialModelAdmin</code> which can use <code>ConfidentialQuerySet</code> methods to enforce access control in Django admin</li>
+<li>Added <code>AuthenticationBackend</code> to handle custom permissions</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.63db3e552bd0543be17ce4a79a18b744e9cb72256bec42b540e3ab0cd43722d0.js" integrity="sha256-Y9s&#43;VSvQVDvhfOSnmhi3ROnLciVr7EK1QOOrDNQ3ItA=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
