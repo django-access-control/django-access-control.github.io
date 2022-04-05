@@ -16,7 +16,7 @@ There are three types of users with different sets of permissions:
 
 ## Installation and setup
 
-The source code can br found [here](https://github.com/django-access-control/example-project).
+The source code can be found [here](https://github.com/django-access-control/example-project).
 
 Assuming that you have a Unix-like shell, the setup is as follows:
 
